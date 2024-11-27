@@ -1,1 +1,77 @@
+SQL queries are commands written in Structured Query Language (SQL) to interact with a relational database. They allow users to create, read, update, and delete data (known as CRUD operations), as well as perform more complex operations like data analysis, joining tables, and managing database structures.
 
+Purpose of SQL Queries
+SQL queries help users communicate with the database to:
+
+    1)Retrieve specific data from large datasets.
+    2)Modify or delete existing data.
+    3)Add new data.
+    4)Create or manage database objects like tables, indexes, and views.
+    
+Basic Categories of SQL Queries
+SQL queries can be broadly categorized based on their purpose:
+
+1)Data Querying (SELECT):
+Retrieve data from the database.
+
+SELECT Name, Age
+FROM Employees
+WHERE Age > 30;
+This retrieves the names and ages of employees older than 30.
+Data Manipulation (INSERT, UPDATE, DELETE):
+Add, modify, or remove data in the database.
+
+2)Insert new data:
+INSERT INTO Employees (Name, Age, Department)
+VALUES ('Alice', 28, 'HR');
+
+3)Update existing data:
+UPDATE Employees
+SET Department = 'Finance'
+WHERE Name = 'Alice';
+
+4)Delete records:
+DELETE FROM Employees
+WHERE Age < 25;
+
+5)Create a new table:
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Department VARCHAR(50)
+);
+
+6)Modify an existing table:
+ALTER TABLE Employees
+ADD Email VARCHAR(100);
+Delete a table:
+sql
+Copy code
+DROP TABLE Employees;
+Data Control (DCL):
+Manage user permissions and access to the database.
+
+7)Grant permissions:
+sql
+Copy code
+GRANT SELECT, INSERT ON Employees TO User123;
+
+8)Revoke permissions:
+REVOKE INSERT ON Employees FROM User123;
+Transaction Control (TCL):
+Manage database transactions to ensure data consistency.
+
+9)Commit a transaction:
+COMMIT;
+
+10)Rollback a transaction:
+ROLLBACK;
+
+11)Data Analysis and Aggregation:Use functions and clauses to summarize or analyze data.
+Example: Find the average age of employees in each department:
+SELECT Department, AVG(Age) AS Average_Age
+FROM Employees
+GROUP BY Department;
+
+------------------------------------------------------------------------
