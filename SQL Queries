@@ -1,144 +1,25 @@
-SQL queries are commands written in Structured Query Language (SQL) to interact with a relational database. They allow users to create, read, update, and delete data (known as CRUD operations), as well as perform more complex operations like data analysis, joining tables, and managing database structures.
 
-Purpose of SQL Queries
-SQL queries help users communicate with the database to:
-
-Retrieve specific data from large datasets.
-Modify or delete existing data.
-Add new data.
-Create or manage database objects like tables, indexes, and views.
-Basic Categories of SQL Queries
-SQL queries can be broadly categorized based on their purpose:
-
-Data Querying (SELECT):
-Retrieve data from the database.
-
-Example:
-sql
-Copy code
-SELECT Name, Age
-FROM Employees
-WHERE Age > 30;
-This retrieves the names and ages of employees older than 30.
-Data Manipulation (INSERT, UPDATE, DELETE):
-Add, modify, or remove data in the database.
-
-Insert new data:
-sql
-Copy code
-INSERT INTO Employees (Name, Age, Department)
-VALUES ('Alice', 28, 'HR');
-Update existing data:
-sql
-Copy code
-UPDATE Employees
-SET Department = 'Finance'
-WHERE Name = 'Alice';
-Delete records:
-sql
-Copy code
-DELETE FROM Employees
-WHERE Age < 25;
-Data Definition (DDL):
-Define or modify the structure of database objects like tables.
-
-Create a new table:
-sql
-Copy code
-CREATE TABLE Employees (
-    ID INT PRIMARY KEY,
-    Name VARCHAR(50),
-    Age INT,
-    Department VARCHAR(50)
-);
-Modify an existing table:
-sql
-Copy code
-ALTER TABLE Employees
-ADD Email VARCHAR(100);
-Delete a table:
-sql
-Copy code
-DROP TABLE Employees;
-Data Control (DCL):
-Manage user permissions and access to the database.
-
-Grant permissions:
-sql
-Copy code
-GRANT SELECT, INSERT ON Employees TO User123;
-Revoke permissions:
-sql
-Copy code
-REVOKE INSERT ON Employees FROM User123;
-Transaction Control (TCL):
-Manage database transactions to ensure data consistency.
-
-Commit a transaction:
-sql
-Copy code
-COMMIT;
-Rollback a transaction:
-sql
-Copy code
-ROLLBACK;
-Data Analysis and Aggregation:
-Use functions and clauses to summarize or analyze data.
-
-Example: Find the average age of employees in each department:
-sql
-Copy code
-SELECT Department, AVG(Age) AS Average_Age
-FROM Employees
-GROUP BY Department;
-SQL Query Syntax
-A typical SQL query follows this general syntax:
-
-sql
-Copy code
-SELECT column1, column2
-FROM table_name
-WHERE condition
-GROUP BY column
-HAVING condition
-ORDER BY column;
-SELECT: Specifies the columns to retrieve.
-FROM: Specifies the table to query.
-WHERE: Filters rows based on a condition.
-GROUP BY: Groups rows to perform aggregate functions like SUM, AVG, etc.
-HAVING: Filters grouped rows.
-ORDER BY: Sorts the results.
 Examples of Common SQL Queries
+
 Retrieve all records from a table:
-
-sql
-Copy code
 SELECT * FROM Employees;
-Find employees in the "HR" department:
 
-sql
-Copy code
+Find employees in the "HR" department:
 SELECT Name, Age
 FROM Employees
 WHERE Department = 'HR';
-Count the number of employees:
 
-sql
-Copy code
+Count the number of employees:
 SELECT COUNT(*) AS Total_Employees
 FROM Employees;
-Join two tables (Employees and Departments):
 
-sql
-Copy code
+Join two tables (Employees and Departments):
 SELECT Employees.Name, Departments.Department_Name
 FROM Employees
 INNER JOIN Departments
 ON Employees.Department_ID = Departments.ID;
-Sort employees by age in descending order:
 
-sql
-Copy code
+Sort employees by age in descending order:
 SELECT Name, Age
 FROM Employees
 ORDER BY Age DESC;
