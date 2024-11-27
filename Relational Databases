@@ -1,0 +1,40 @@
+A relational database is a type of database that organizes and stores data in a structured format using tables, which consist of rows and columns. It uses a relational model, where data is represented as relations (mathematical term for tables). Each table, or relation, represents a specific entity (like customers, orders, or products) and is related to other tables through keys.
+
+Key Concepts of a Relational Database
+ 
+1 - Tables:
+The primary structure for storing data.
+Each table is made up of:
+Rows (Records): Represent individual data entries.
+Columns (Attributes): Represent data fields or properties.
+
+Example of a table:
+Customer_ID	Name	Email	            Age
+1	Alice Smith	  alice@example.com	  25
+2	Bob Johnson	  bob@example.com	    30
+
+2 - Primary Key:
+A unique identifier for each row in a table.
+Ensures that no two rows in a table are identical.
+Example: In the table above, Customer_ID is the primary key.
+
+3 - Foreign Key:
+A field in one table that links to the primary key in another table.
+Used to establish a relationship between two tables.
+Example: An Orders table may have a Customer_ID column that acts as a foreign key linking it to the Customer table.
+
+4 - Relationships:
+Data in different tables is connected using keys. Common types of relationships are:
+One-to-One: Each record in one table relates to one record in another table.
+One-to-Many: A record in one table relates to multiple records in another.
+Many-to-Many: Records in one table relate to multiple records in another, typically using a junction table.
+
+5 - SQL (Structured Query Language):
+The standard language used to interact with relational databases.
+Allows for creating tables, inserting data, querying, updating, and deleting data.
+Example query:
+
+SELECT Name, Email
+FROM Customers
+WHERE Age > 25;
+
