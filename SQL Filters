@@ -1,9 +1,14 @@
-WHERE and LIKE
 
 -WHERE (exact match)
 -LIKE : (pattern match)
+    Wildcards:
+    %: Matches any sequence of characters (e.g., "Alice%", "A%").
+    _: Matches a single character (e.g., "A_lice").
+-AND
+-OR
+-NOT 
 
-
+-----------------------------------------------------------
 Query 1: Filter with WHERE (Exact Match)
 Get all employees from the "IT" department:
 
@@ -15,7 +20,7 @@ Result:
   Name	        Department
   Bob Smith	    IT
   Alice Sanders	IT
-
+---------------------------------------------------------
 Query 2: Filter with LIKE (Pattern Match)
 Get all employees whose names start with "Alice":
 
@@ -27,11 +32,5 @@ Get all employees whose names start with "Alice":
 Name	        Email
 Alice Johnson	alice.j@company.com
 Alice Sanders	alice.s@company.com
+--------------------------------------------------------
 
-Explanation
-WHERE: Filters rows based on a condition (Department = 'IT').
-LIKE: Searches for patterns in a column.
-'Alice%': Matches any name that starts with "Alice".
-Wildcards:
-%: Matches any sequence of characters (e.g., "Alice%", "A%").
-_: Matches a single character (e.g., "A_lice").
