@@ -7,7 +7,7 @@ SQL queries help users communicate with the database to:
     2)Modify or delete existing data.
     3)Add new data.
     4)Create or manage database objects like tables, indexes, and views.
-    
+----------------------------------------------------------------------------------    
 Basic Categories of SQL Queries
 SQL queries can be broadly categorized based on their purpose:
 
