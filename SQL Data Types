@@ -1,5 +1,5 @@
 #SQL common Data Types:
 
-String
-Numeric
-Date and time
+1) String : ordered sequence of characters
+2) Numeric : numbers 
+3) Date and time 
