@@ -1,12 +1,14 @@
 
--WHERE (exact match)
--LIKE : (pattern match)
+1) WHERE (exact match)
+2) LIKE : (pattern match)
     Wildcards:
     %: Matches any sequence of characters (e.g., "Alice%", "A%").
     _: Matches a single character (e.g., "A_lice").
--AND
--OR
--NOT 
+3) Date/Time >,=,<,
+4) BETWEEN
+5) AND
+6) OR
+7) NOT 
 
 -----------------------------------------------------------
 Query 1: Filter with WHERE (Exact Match)
@@ -33,4 +35,17 @@ Name	        Email
 Alice Johnson	alice.j@company.com
 Alice Sanders	alice.s@company.com
 --------------------------------------------------------
+Query 3: Filter with time
 
+SELECT *
+FROM log_in_attempts
+WHERE time > '12:00';
+
+-------------------------------------------------------
+Query 4: Filter with Date between
+SELECT *
+FROM machines 
+WHERE OS_patch_date BETWEEN '2024-07-03' AND '2024-07-04';
+
+--------------------------------------------------------
+Query 5: 
