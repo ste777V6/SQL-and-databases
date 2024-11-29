@@ -48,4 +48,22 @@ FROM machines
 WHERE OS_patch_date BETWEEN '2024-07-03' AND '2024-07-04';
 
 --------------------------------------------------------
-Query 5: 
+Query 5: Filter with AND
+
+SELECT *
+FROM machines
+WHERE operating_system = 'OS1'AND email_client= 'email_client_1'
+
+--------------------------------------------------------
+Filter with OR
+
+SELECT *
+FROM machines 
+WHERE operating system ='OS1' OR operating system ='OS3'
+
+--------------------------------------------------------
+Filter with NOT
+
+SELECT * 
+FROM machines 
+WHERE NOT operating system = 'OS3' 
