@@ -3,3 +3,4 @@
 1) String : ordered sequence of characters
 2) Numeric : numbers 
 3) Date and time 
+4) Boolean : TRUE or FALSE
