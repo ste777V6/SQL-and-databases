@@ -1,0 +1,10 @@
+Summary Table of Aggregate Functions
+
+Function	Description	Example
+COUNT()	Counts rows or non-NULL values	COUNT(column)
+SUM()	Calculates the total sum of values	SUM(column)
+AVG()	Calculates the average of values	AVG(column)
+MIN()	Finds the smallest value	MIN(column)
+MAX()	Finds the largest value	MAX(column)
+
+------------------------------------------------------------
